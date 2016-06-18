@@ -4,7 +4,7 @@ prometheus:
     - 9090:9090
   volumes:
     - /data/prometheus:/prometheus
-  container_name: "prometheus"
+  container_name: prometheus
   links:
     - pushgateway
 
