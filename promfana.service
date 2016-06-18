@@ -1,0 +1,11 @@
+[Unit]
+Description=Grafana, Prometheus, and Pushgateway
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStartPre=-/usr/local/bin/docker-compose -f /home/ubuntu/promfana/docker-compose.yml down
+ExecStart=/usr/local/bin/docker-compose -f /home/ubuntu/promfana/docker-compose.yml up -d
+
+[Install]
+WantedBy=multi-user.target

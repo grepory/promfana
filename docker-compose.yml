@@ -5,8 +5,10 @@ prometheus:
   volumes:
     - /data/prometheus:/prometheus
   container_name: "prometheus"
+  links:
+    - pushgateway
 
-prom_gateway:
+pushgateway:
   image: prom/pushgateway
   ports:
     - 9091:9091
@@ -15,7 +17,9 @@ prom_gateway:
 grafana:
   image: grafana/grafana
   ports:
-    - 9092:3000
+    - 3000:3000
   container_name: grafana
   volumes:
     - /data/grafana:/var/lib/grafana
+  links:
+    - prometheus
