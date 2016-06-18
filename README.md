@@ -29,3 +29,5 @@ starts docker-compose on boot. An example Systemd unit is included.
 The first time you login to Grafana you will have to configure the Prometheus
 back-end. I tried to make it so that you didn't have to, but I couldn't find
 documentation on that. If you know how to do that, please let me know.
+
+You can see how to setup a Prometheus backend [here](https://prometheus.io/docs/visualization/grafana/).
