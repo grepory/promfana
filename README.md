@@ -10,7 +10,7 @@ scraping things if I wanted.
 You will need [Docker](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/).
 
 Setup persistent storage. I put this at /data, and the mount points in
-docker-compose exect these to be there:
+docker-compose expect these to be there:
 
 `mkdir -p /data/grafana /data/prometheus`
 
@@ -24,9 +24,9 @@ Then run `make` to build docker images.
 ## Running
 
 You can `make run` to run things, or you can add a service to your machine that
-starts docker-compose on boot. An example Systemd unit is included.
+starts docker-compose on boot. Example Systemd and Upstart units are included.
 
-The first time you login to Grafana you will have to configure the Prometheus
+The first time you use Grafana you will have to configure the Prometheus
 back-end. I tried to make it so that you didn't have to, but I couldn't find
 documentation on that. If you know how to do that, please let me know.
 
